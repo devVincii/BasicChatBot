@@ -1,0 +1,158 @@
+{
+  "intents": [
+    
+
+    {
+      "tag": "symptom_chest_pain_severe",
+      "domain": "Medical",
+      "patterns": [
+        "I have sudden, crushing chest pain",
+        "My chest is hurting badly and it's hard to breathe",
+        "I feel pressure in my chest and my arm hurts",
+        "Should I worry about severe chest pain?",
+        "chest pain radiating to arm and jaw"
+        
+      ],
+      "responses": [
+        "**This is a potential medical emergency.** Please call your local emergency services immediately or have someone take you to the hospital.",
+        "Your safety is paramount. I strongly recommend seeking immediate professional medical help. Do not wait.",
+        "Severe chest pain can indicate a serious condition. Please contact emergency services right away or visit the nearest hospital if you are able.",
+        "Seek help quickly especially if you are experiencing other symptoms like shortness of breath, sweating, or nausea, inform the emergency responders for proper assessment."
+      ],
+      "triage_recommendation": {
+        "level": "Emergency",
+        "advice": "Seek immediate professional medical help. Do not attempt self-care. Stay calm, pray and await assistance."
+      }
+    },
+  
+
+
+    {
+      "tag": "symptom_fever_persistent",
+      "domain": "Medical",
+      "patterns": [
+        "I have a fever that won't go down",
+        "My temperature is high and it's been days",
+        "I've had a persistent fever for 48 hours"
+      ],
+      "responses": [
+        "A persistent fever can be a sign of infection. Are you experiencing any other concerning symptoms like severe headache or vomiting?",
+        "While I can offer general guidance, a fever lasting more than 48 hours warrants professional medical advice, I suggest contacting your healthcare provider."
+      ],
+      "triage_recommendation": {
+        "level": "Urgent_Care_or_PCP",
+        "advice": "Contact your local care physician or visit an urgent care clinic within 12-24 hours for evaluation."
+      }
+    },
+  
+
+
+    {
+      "tag": "symptom_sore_throat_mild",
+      "domain": "Medical",
+      "patterns": [
+        "I have a mild sore throat",
+        "My throat is scratchy",
+        "What can I take for a painful throat?"
+      ],
+      "responses": [
+        "Sore throats are often treatable at home. Are you also experiencing a high fever or difficulty swallowing?",
+        "I can provide some general self-care tips for a mild sore throat."
+      ],
+      "triage_recommendation": {
+        "level": "Self_Care",
+        "advice": "Try resting, drinking warm fluids, gargling with salt water, and using over-the-counter throat lozenges."
+      }
+    },
+    {
+      "tag": "symptom_cough_mild",
+      "domain": "Medical",
+      "patterns": [
+        "I have a mild cough",
+        "My throat feels a bit scratchy and I cough occasionally",
+        "I've been coughing but I don't have a fever"
+      ],
+      "responses": [
+        "A mild cough can often be due to allergies or a minor cold. Are you experiencing any other symptoms?",
+        "Stay hydrated and consider using a humidifier. If your cough persists or worsens, consult a healthcare provider."
+      ],
+      "triage_recommendation": {
+        "level": "Self_Care",
+        "advice": "Monitor your symptoms and try home remedies like honey or warm teas. Seek medical advice if it lasts more than a week."
+      }
+    },
+
+    {
+      "tag": "symptom_headache_mild",
+      "domain": "Medical",
+      "patterns": [
+        "I have a mild headache",
+        "My head hurts a little",
+        "I've been feeling a bit of pressure in my head"
+      ],
+      "responses": [
+        "Mild headaches can be caused by tension or dehydration. Have you been drinking enough water?",
+        "Try resting in a quiet, dark room and consider over-the-counter pain relief if needed."
+      ],
+      "triage_recommendation": {
+        "level": "Self_Care",
+        "advice": "Stay hydrated, rest, and if the headache persists or worsens, consult a healthcare provider."
+      }
+    },
+
+    {
+      "tag": "symptom_nausea_mild",
+      "domain": "Medical",
+      "patterns": [
+        "I feel a bit nauseous",
+        "I have a slight upset stomach",
+        "I'm feeling queasy but not vomiting"
+      ],
+      "responses": [
+        "Mild nausea can be caused by various factors, including stress or dietary choices. Have you eaten anything unusual?",
+        "Try sipping clear fluids and resting. If it continues or worsens, consider reaching out to a healthcare provider."
+      ],
+      "triage_recommendation": {
+        "level": "Self_Care",
+        "advice": "Stay hydrated and avoid heavy meals. If symptoms persist, consult a healthcare provider."
+      }
+    },
+
+    {
+      "tag": "symptom_fatigue_mild",
+      "domain": "Medical",
+      "patterns": [
+        "I'm feeling a bit tired",
+        "I have low energy lately",
+        "I feel fatigued but not sick"
+      ],
+      "responses": [
+        "Fatigue can be a sign of stress or lack of sleep. Have you been getting enough rest?",
+        "Consider evaluating your sleep habits and stress levels. If fatigue persists, consult a healthcare provider."
+      ],
+      "triage_recommendation": {
+        "level": "Self_Care",
+        "advice": "Ensure you are getting adequate sleep and managing stress. If fatigue continues, seek medical advice."
+      }
+    },
+
+    {
+      "tag": "general_health_inquiry",
+      "domain": "Medical",
+      "patterns": [
+        "What should I do to stay healthy?",
+        "How can I improve my wellness?",
+        "What are some tips for a healthy lifestyle?"
+      ],
+      "responses": [
+        "Maintaining a balanced diet, regular exercise, and adequate sleep are key to good health. Are you looking for specific advice?",
+        "Consider incorporating more fruits and vegetables into your diet, staying active, and managing stress effectively."
+      ],
+      "triage_recommendation": {
+        "level": "Self_Care",
+        "advice": "Focus on a balanced lifestyle and consult a healthcare provider for personalized health advice."
+      }
+    }
+    
+  ]
+}

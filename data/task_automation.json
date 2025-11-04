@@ -1,0 +1,227 @@
+{
+  "intents": [
+ 
+
+
+    {
+      "tag": "schedule_appointment",
+      "domain": "TaskAutomation",
+      "patterns": [
+        "Please schedule a meeting with ********@person.name: Dr. Llale******* for ******@sys.time: 10 AM***** ****@sys.date: next Tuesday******.",
+        "Can you book a 1-on-1 with ******@person.name: desk receptionist Magarette****** ******@sys.date: tomorrow**?",
+        "Set up a call with ******@person.name: the nurse***** on *****@sys.date: March 15th***** at ******@sys.time: 2 o'clock******."
+      ],
+      "responses": [
+        "Confirmed. I'm scheduling an appointment with **@person.name** for **@sys.date** at **@sys.time**.",
+        "Got it! I will book that call now."
+      ],
+      "action": "API_CALL_CALENDAR"
+    },
+
+
+
+    {
+      "tag": "send_email",
+      "domain": "TaskAutomation",
+      "patterns": [
+        "Send an email to ******@person.name: Dr Llale****** about the ******@task.type: appointment details******.",
+        "Can you email ******@person.name: the desk receptionist Magarette****** regarding the ******@task.type: upcoming checkup******?",
+        "Draft an email to ******@person.name: nurse Emily****** with the ******@task.type: appointment details****** attached."
+      ],
+      "responses": [
+        "Composing an email to **@person.name** about the **@task.type** now.",
+        "I'll get that email drafted for you right away."
+      ],
+      "action": "API_CALL_EMAIL_SERVICE"
+    },
+
+
+
+
+
+    {
+        "tag": "set_reminder",
+        "domain": "TaskAutomation",
+        "patterns": [
+            "Remind me to ******@task.type: submit the clinical report****** on ******@sys.date: Friday****** at ******@sys.time: 3 PM******.",
+            "Set a reminder for ******@task.type: chat****** next ******@sys.date: Monday****** at ******@sys.time: 9 AM******.",
+            "Can you remind me to ******@task.type: call the clinic****** tomorrow at ******@sys.time: 11 o'clock******?"
+        ],
+        "responses": [
+            "Reminder set for **@task.type** on **@sys.date** at **@sys.time**.",
+            "Got it! I'll remind you about that task at the specified time."
+        ],
+        "action": "API_CALL_REMINDER_SERVICE"
+    },
+
+
+
+
+
+    {
+        "tag": "check_weather",
+        "domain": "TaskAutomation",
+        "patterns": [
+            "What's the weather like in ******@sys.location: pretoria****** today?",
+            "Will it rain in ******@sys.location: pretoria****** this weekend?",
+            "Give me the forecast for ******@sys.location: pretoria****** for the next three days."
+        ],
+        "responses": [
+            "Checking the weather for **@sys.location** now.",
+            "Here's the latest forecast for **@sys.location**."
+        ],
+        "action": "API_CALL_WEATHER_SERVICE"
+
+    },
+   
+
+
+
+    {
+      "tag": "retrieve_document",
+      "domain": "TaskAutomation",
+      "patterns": [
+        "Pull up the **@task.type: medical report** for **@sys.date: Q4 of last year**.",
+        "Where is the **@task.type: booking** for the **@sys.location: London office**?",
+        "Find the latest **@task.type: security policy**."
+      ],
+      "responses": [
+        "Retrieving the **@task.type** now. Please wait a moment.",
+        "Here is the document for **@sys.location**."
+      ],
+      "action": "API_CALL_DOCUMENT_DB"
+    },
+
+
+
+
+
+    
+
+    {
+      "tag": "checkup_booking_status",
+      "domain": "TaskAutomation",
+      "patterns": [
+        "What's the status of my **@task.type: appointment booking**?",
+        "Can you check if my **@task.type: meeting with the doctor** is confirmed?",
+        "I want to know the update on my **@task.type: therapy session**."
+      ],
+      "responses": [
+        "Checking the status of your **@task.type** now.",
+        "Here is the latest update on your **@task.type**."
+      ],
+      "action": "API_CALL_CHECK_BOOKING_STATUS"
+    },
+
+
+
+
+
+
+    {
+        "tag": "checkup",
+        "domain": "TaskAutomation",
+        "patterns": [
+            "I would like to schedule a routine checkup.",
+            "Can you help me book a general health checkup?",
+            "I need to arrange a physical examination."
+        ],
+        "responses": [
+            "Sure! I can help you schedule a routine checkup. Please provide me with your preferred date and time.",
+            "I'd be happy to assist you in booking a general health checkup. When would you like to schedule it?"
+        ],
+        "action": "API_CALL_SCHEDULE_CHECKUP"
+    },
+
+    {
+      "tag": "cancel_appointment",
+      "domain": "TaskAutomation",
+      "patterns": [
+        "Cancel my appointment with ******@person.name: Dr. Llale******.",
+        "I need to cancel my meeting with ******@person.name: the nurse******.",
+        "Please cancel my checkup scheduled for ******@sys.date: next Wednesday******."
+      ],
+      "responses": [
+        "I am processing the cancellation of your appointment with **@person.name**.",
+        "Your appointment has been canceled successfully."
+      ],
+      "action": "API_CALL_CANCEL_APPOINTMENT"
+    },
+
+    {
+      "tag": "update_appointment",
+      "domain": "TaskAutomation",
+      "patterns": [
+        "Change my appointment with ******@person.name: Dr. Llale****** to ******@sys.date: next Friday****** at ******@sys.time: 1 PM******.",
+        "I want to reschedule my meeting with ******@person.name: the nurse****** to ******@sys.date: tomorrow******.",
+        "Please update my checkup to ******@sys.date: next month******."
+      ],
+      "responses": [
+        "Updating your appointment with **@person.name** to **@sys.date** at **@sys.time**.",
+        "Your appointment has been successfully updated."
+      ],
+      "action": "API_CALL_UPDATE_APPOINTMENT"
+    },
+
+    {
+      "tag": "get_health_tips",
+      "domain": "TaskAutomation",
+      "patterns": [
+        "What are some health tips for staying fit?",
+        "Can you give me advice on maintaining a healthy lifestyle?",
+        "What should I do to improve my wellness?"
+      ],
+      "responses": [
+        "Here are some tips for maintaining a healthy lifestyle: stay active, eat a balanced diet, and manage stress effectively.",
+        "Consider incorporating more fruits and vegetables into your meals and staying hydrated."
+      ],
+      "action": "API_CALL_HEALTH_TIPS"
+    },
+
+    {
+      "tag": "track_medication",
+      "domain": "TaskAutomation",
+      "patterns": [
+        "Remind me to take my medication at ******@sys.time: 8 AM******.",
+        "Can you set a reminder for my pills every day at ******@sys.time: 7 PM******?",
+        "I need to track my medication schedule."
+      ],
+      "responses": [
+        "Setting a reminder for your medication at **@sys.time**.",
+        "Got it! I'll remind you to take your medication at the specified time."
+      ],
+      "action": "API_CALL_MEDICATION_REMINDER"
+    },
+
+    {
+      "tag": "find_clinic_location",
+      "domain": "TaskAutomation",
+      "patterns": [
+        "Where is the nearest clinic?",
+        "Can you tell me the location of the clinic?",
+        "Find the address of the clinic."
+      ],
+      "responses": [
+        "The nearest clinic is located at [insert address]. Would you like directions?",
+        "Here is the address of the clinic: [insert address]."
+      ],
+      "action": "API_CALL_CLINIC_LOCATION"
+    },
+
+    {
+      "tag": "how_far_in_queue",
+      "domain": "TaskAutomation",
+      "patterns": [
+        "How far am I in the queue?",
+        "What is my position in the waiting list?",
+        "Can you tell me my queue status?"
+      ],
+      "responses": [
+        "You are currently number **X** in the queue. We appreciate your patience.",
+        "Your position in the waiting list is **X**. Thank you for waiting."
+      ],
+      "action": "API_CALL_QUEUE_STATUS"
+    }
+
+  ]
+}

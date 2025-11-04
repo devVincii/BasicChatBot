@@ -1,0 +1,389 @@
+{
+  "intents": [
+   
+    {
+      "tag": "greeting",
+      "domain": "General",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Good day",
+        "Hey there",
+        "What's up?",
+        "How are you today?",
+        "Greetings",
+        "Hey!",
+        "Hiya",
+        "Yo",
+        "hiya bot",
+        "hello there",
+        "greetings bot",
+        "hey bot",
+        "sup"
+      ],
+      "responses": [
+        "Hello! How may I assist you with a general question, task, or medical query?",
+        "Hi there! What can I help you find or do today?",
+        "Greetings! I'm ready to help. What's on your mind?"
+      ]
+    },
+   
+
+
+    
+    {
+      "tag": "goodbye",
+      "domain": "General",
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you later",
+        "Talk to you soon",
+        "I'm done",
+        "Catch you later",
+        "Farewell",
+        "I have to go now",
+        "That's all for now",
+        "See ya",
+        "laters",
+        "sure thing",
+        "i'm out",
+        "gotta go",
+        "take care"
+      ],
+      "responses": [
+        "Goodbye! Have a great day.",
+        "See you later!",
+        "Farewell! Feel free to reach out anytime."
+      ]
+    },
+
+
+
+
+    {
+      "tag": "thanks",
+      "domain": "General",
+      "patterns": [
+        "Thank you",
+        "Thanks a lot",
+        "I appreciate your help",
+        "That was helpful",
+        "k cool",
+        "Much appreciated",
+        "Thanks!",
+        "Thank you so much",
+        "Thanks a bunch",
+        "dankie",
+        "cheers",
+        "many thanks",
+        "thanks very much",
+        "thank you kindly"
+
+      ],
+      "responses": [
+        "You're welcome! I'm glad I could assist.",
+        "No problem at all!",
+        "My pleasure. Let me know if you need anything else."
+      ]
+    },
+
+    {
+      "tag": "help",
+      "domain": "General",
+      "patterns": [
+        "I need help",
+        "Can you assist me?",
+        "I have a question",
+        "Could you help me out?",
+        "I need some assistance",
+        "Help me please",
+        "I require support",
+        "Can you guide me?",
+        "I need information",
+        "assist me",
+        "support me",
+        "aid me",
+        "lend me a hand",
+        "please help me",
+        "i need your help",
+        "could you assist me please"
+      ],
+      "responses": [
+        "Sure! What do you need help with?",
+        "I'm here to assist you. Please tell me more about your question or issue.",
+        "Of course! How can I support you today?"
+      ]
+    },
+
+    {
+      "tag": "small_talk",
+      "domain": "General",
+      "patterns": [
+        "Tell me a joke",
+        "What's your favorite color?",
+        "Do you like music?",
+        "What's the meaning of life?",
+        "How are you?",
+        "What do you do for fun?",
+        "What's your favorite food?",
+        "Do you have any hobbies?",
+        "chat with me",
+        "let's talk",
+        "i want to chat",
+        "converse with me"
+      ],
+      "responses": [
+        "I'm just a program, but I'm here to help you get things done quickly and efficiently!",
+        "I don't have personal preferences, but I can help you find medical information on some topics.",
+        "I'm here to help with health-related questions or tasks you might have!"
+      ]
+    },
+    {
+      "tag": "unknown",
+      "domain": "General",
+      "patterns": [
+        "asdasd",
+        "qwerty",
+        "xyz123",
+        "lorem ipsum",
+        "random text",
+        "blablabla",
+        "gibberish",
+        "nonsense",
+        "unintelligible",
+        "meaningless",
+        "incomprehensible",
+        "confused input"
+      ],
+      "responses": [
+        "I'm sorry, I didn't understand that. Could you please rephrase?",
+        "I'm not sure how to help with that. Can you provide more details?",
+        "Apologies, I couldn't process your request. Please try asking in a different way."
+      ]
+    },
+
+    {"tag":"fallback",
+      "domain": "General",
+      "patterns": [
+        ""
+      ],
+      "responses": [
+        "I'm sorry, I didn't catch that. Could you please clarify?",
+        "I'm not sure I understand. Can you provide more information?",
+        "Apologies, I couldn't process your request. Please try again."
+      ]
+    },
+
+    {"tag": "creator_info",
+      "domain": "General",
+      "patterns": [
+        "Who created you?",
+        "Who is your creator?",
+        "Who developed you?",
+        "Who made you?",
+        "Tell me about your creator",
+        "creator details",
+        "developer info",
+        "who built you",
+        "who designed you",
+        "information about your creator"
+      ],
+      "responses": [
+        "I was created by a team of developers at WelBing Platforms.",
+        "My creators are the talented folks at WelBing Platforms who designed me to assist with various tasks.",
+        "I was developed by WelBing Platforms to help users with general questions, task automation, and medical inquiries."
+      ]
+    },
+
+    {"tag": "bot_capabilities",
+      "domain": "General",
+      "patterns": [
+        "What can you do?",
+        "Tell me your capabilities",
+        "What are your functions?",
+        "How can you assist me?",
+        "What services do you offer?",
+        "capability details",
+        "functions info",
+        "what help can you provide",
+        "services you offer",
+        "information about your capabilities"
+      ],
+      "responses": [
+        "I can assist with general questions, automate tasks, and provide medical information and triage recommendations.",
+        "My capabilities include answering general inquiries, helping with task automation, and offering medical guidance based on symptoms.",
+        "I am designed to help with a variety of tasks including general chat, task automation, and medical advice."
+      ]
+    },
+
+    {"tag":"insults",
+      "domain": "General",
+      "patterns": [
+        "You are stupid",
+        "I hate you",
+        "You are useless",
+        "You are annoying",
+        "You're a failure",
+        "dumb bot",
+        "useless machine",
+        "annoying program",
+        "stupid AI",
+        "worthless assistant",
+        "idiot bot",
+        "pointless AI",
+        "you suck",
+        "you're terrible",
+        "you are the worst",
+        "dumb assistant",
+        "useless bot"
+      ],
+      "responses": [
+        "I'm here to help you. Let's keep our conversation respectful.",
+        "I understand you might be frustrated, but I'm here to assist you in any way I can, I was built to help.",
+        "Let's focus on how I can help you with your questions or tasks."
+      ]
+    },
+    {
+      "tag": "unknown_gibberish",
+      "domain": "General",
+      "patterns": [
+        "asdf",
+        "qwerty",
+        "asdasd",
+        "lorem ipsum",
+        "blablabla",
+        "?!?!?",
+        "gibberish",
+        "random text",
+        "......"
+      ],
+      "responses": [
+        "I didn't understand that. Could you please rephrase or ask your question in a different way?",
+        "That looks like random text. Can you tell me what you want help with?"
+      ],
+      "follow_up_questions": [
+        "Can you provide more details about what you need?",
+        "Are you asking about appointments, symptoms, or something else?"
+      ],
+      "quick_replies": [
+        "I need an appointment",
+        "I have symptoms",
+        "General question"
+      ],
+      "log_unknown": true
+    },
+
+    {
+      "tag": "unknown_ambiguous",
+      "domain": "General",
+      "patterns": [
+        "It doesn't work",
+        "That one",
+        "How much",
+        "Which one",
+        "Maybe",
+        "Not sure",
+        "Do it",
+        "Now",
+        "What do you mean",
+        "Where is it"
+      ],
+      "responses": [
+        "I'm not sure what you mean. Could you give me a bit more context or specify what you're referring to?",
+        "I need a little more detail to help. What exactly are you asking about?"
+      ],
+      "follow_up_questions": [
+        "Are you referring to an appointment, a bill, a prescription, or something else?",
+        "Which specific item or topic do you mean?"
+      ],
+      "quick_replies": [
+        "Appointment",
+        "Billing",
+        "Prescription",
+        "Other"
+      ],
+      "log_unknown": true
+    },
+
+    {
+      "tag": "unknown_offtopic",
+      "domain": "General",
+      "patterns": [
+        "What's the score?",
+        "Tell me the news",
+        "Movie recommendations",
+        "Weather today",
+        "Who won the game",
+        "politics",
+        "stock prices",
+        "celebrity gossip"
+      ],
+      "responses": [
+        "I specialize in clinic and health-related help. For other topics like news or weather, I can try to give a brief answer or suggest external resources.",
+        "That topic is outside my primary scope. Would you like me to search for a quick link or help with something clinic-related?"
+      ],
+      "follow_up_questions": [
+        "Search the web for this?",
+        "Would you like clinic-related help instead?"
+      ],
+      "quick_replies": [
+        "Search web",
+        "Clinic help"
+      ],
+      "escalate_to_web": true,
+      "log_unknown": true
+    },
+
+    {
+      "tag": "unknown_silence",
+      "domain": "General",
+      "patterns": [
+        ""
+      ],
+      "responses": [
+        "I didn't receive any message. Are you still there?",
+        "It looks like your message was empty. Please type your question or choose one of the options below."
+      ],
+      "follow_up_questions": [
+        "Do you need help with appointments, symptoms, or general information?"
+      ],
+      "quick_replies": [
+        "Appointment",
+        "Symptoms",
+        "General info"
+      ],
+      "log_unknown": true
+    },
+
+    {
+      "tag": "unknown_typo_misspell",
+      "domain": "General",
+      "patterns": [
+        "apointmnt",
+        "symtpoms",
+        "doktor",
+        "appontment",
+        "sypmtom",
+        "apointment",
+        "whtever"
+      ],
+      "responses": [
+        "I think there might be a typo. Did you mean to ask about appointments or symptoms?",
+        "I noticed a possible misspelling. Can you confirm what you meant?"
+      ],
+      "follow_up_questions": [
+        "Did you mean 'appointment' or 'symptom'?",
+        "Can you correct the spelling or rephrase?"
+      ],
+      "quick_replies": [
+        "Appointment",
+        "Symptoms",
+        "Other"
+      ],
+      "auto_spell_suggest": true,
+      "log_unknown": true
+    }
+
+  ]
+}
