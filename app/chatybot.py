@@ -42,11 +42,5 @@ class LLM_Text_tokenizer:
         doc = self.nlp(text)
         return doc.vector.tolist()
 
-mk = LLM_Text_tokenizer()
-print(mk.tokenize("Hello, how are you?"))
-print(len(mk.tokenize("Hello, how are you?")))
-print(type(mk.tokenize("Hello, how are you?")))
-print(np.array(mk.tokenize("Hello, how are you?")).shape)
-print(np.array(mk.tokenize("Hello, how are you?")).dtype)
-print("it worked")
+
 # %%
