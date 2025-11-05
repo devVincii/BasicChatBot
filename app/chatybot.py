@@ -1,7 +1,6 @@
 import os
 import json
 import spacy
-import spacy_transformers
 import numpy as np
 import random
 
@@ -45,4 +44,9 @@ class LLM_Text_tokenizer:
 
 mk = LLM_Text_tokenizer()
 print(mk.tokenize("Hello, how are you?"))
+print(len(mk.tokenize("Hello, how are you?")))
+print(type(mk.tokenize("Hello, how are you?")))
+print(np.array(mk.tokenize("Hello, how are you?")).shape)
+print(np.array(mk.tokenize("Hello, how are you?")).dtype)
+print("it worked")
 # %%
