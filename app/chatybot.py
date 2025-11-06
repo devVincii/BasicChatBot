@@ -30,7 +30,7 @@ class LLM(nn.Module):
         out = self.relu(out)
         out = self.dropout(out)
         out = self.fc3(out)
-        
+    
         return out
     
     
@@ -41,6 +41,8 @@ class LLM_Text_tokenizer:
     def tokenize(self, text):
         doc = self.nlp(text)
         return doc.vector.tolist()
+    
+    
 
 
 # %%
