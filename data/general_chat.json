@@ -270,8 +270,7 @@
         "I need an appointment",
         "I have symptoms",
         "General question"
-      ],
-      "log_unknown": true
+      ]
     },
 
     {
@@ -302,8 +301,7 @@
         "Billing",
         "Prescription",
         "Other"
-      ],
-      "log_unknown": true
+      ]
     },
 
     {
@@ -330,9 +328,7 @@
       "quick_replies": [
         "Search web",
         "Clinic help"
-      ],
-      "escalate_to_web": true,
-      "log_unknown": true
+      ]
     },
 
     {
@@ -352,8 +348,7 @@
         "Appointment",
         "Symptoms",
         "General info"
-      ],
-      "log_unknown": true
+      ]
     },
 
     {
@@ -380,9 +375,7 @@
         "Appointment",
         "Symptoms",
         "Other"
-      ],
-      "auto_spell_suggest": true,
-      "log_unknown": true
+      ]
     }
 
   ]

@@ -36,7 +36,7 @@
         "I've had a persistent fever for 48 hours"
       ],
       "responses": [
-        "A persistent fever can be a sign of infection. Are you experiencing any other concerning symptoms like severe headache or vomiting?",
+        "Ohh my goodness, a persistent fever can be a sign of infection. Are you experiencing any other concerning symptoms like severe headache or vomiting?",
         "While I can offer general guidance, a fever lasting more than 48 hours warrants professional medical advice, I suggest contacting your healthcare provider."
       ],
       "triage_recommendation": {
