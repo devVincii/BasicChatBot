@@ -135,7 +135,7 @@ class TextProcessor:
         # Convert the lists to NumPy arrays for training
         self.X = np.array(bags)
         self.y = np.array(indices)
-
+###################################################################################################################
     def training_model(self, input_size, output_size, hidden_size=8, num_epochs=1000, batch_size=8, learning_rate=0.001):
         # Convert training data from NumPy arrays to PyTorch tensors
         X_tensor = torch.tensor(self.X).float()
