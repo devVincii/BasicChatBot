@@ -1,0 +1,144 @@
+{
+  "emergency_keywords": [
+    "chest pain", "crushing chest", "angina",
+    "trouble breathing", "shortness of breath", "dyspnea",
+    "unconscious", "blacked out", "fainted",
+    "stroke", "face drooping", "weakness one side",
+    "severe bleeding", "hemorrhage",
+    "vision loss", "sudden blindness",
+    "suicide", "kill myself", "self harm",
+    "thunderclap headache", "worst headache of my life",
+    "seizure", "convulsing",
+    "vomiting blood", "bloody stool", "black stool",
+    "severe allergic reaction", "can't breathe", "swollen tongue"
+  ],
+
+  "specialist_map": {
+    "stomach": { "primary": "Gastroenterologist", "alternatives": ["Internist", "Family Medicine Practitioner", "Nurse Practitioner"] },
+    "gut": { "primary": "Gastroenterologist", "alternatives": ["Internist", "General Surgeon"] },
+    "nausea": { "primary": "Gastroenterologist", "alternatives": ["Primary Care Physician", "Pharmacist"] },
+    "vomit": { "primary": "Gastroenterologist", "alternatives": ["Primary Care Physician"] },
+    "acid": { "primary": "Gastroenterologist", "alternatives": ["Dietitian", "Primary Care Physician"] },
+
+    "skin": { "primary": "Dermatologist", "alternatives": ["Plastic Surgeon", "Allergist", "Primary Care Physician"] },
+    "rash": { "primary": "Dermatologist", "alternatives": ["Allergist", "Infectious Disease Specialist"] },
+    "itch": { "primary": "Dermatologist", "alternatives": ["Allergist"] },
+
+    "eye": { "primary": "Ophthalmologist", "alternatives": ["Optometrist", "Neurologist (if vision loss)"] },
+
+    "joint": { "primary": "Rheumatologist", "alternatives": ["Orthopedist", "Physical Therapist", "Sports Medicine"] },
+    "back": { "primary": "Orthopedist", "alternatives": ["Physical Therapist", "Pain Management"] },
+    "knee": { "primary": "Orthopedist", "alternatives": ["Physical Therapist", "Sports Medicine"] },
+
+    "head": { "primary": "Neurologist", "alternatives": ["Pain Management Specialist", "ENT Specialist"] },
+    "migraine": { "primary": "Neurologist", "alternatives": ["Pain Clinic"] },
+
+    "sleep": { "primary": "Sleep Medicine Specialist", "alternatives": ["Pulmonologist", "Psychiatrist", "Neurologist"] },
+    "tired": { "primary": "Endocrinologist", "alternatives": ["Internist", "Rheumatologist", "Hematologist"] },
+
+    "cold": { "primary": "Primary Care Physician", "alternatives": ["Walk-in Clinic", "Pharmacist"] },
+    "flu": { "primary": "Primary Care Physician", "alternatives": ["Walk-in Clinic", "Telehealth Provider"] },
+    "fever": { "primary": "Primary Care Physician", "alternatives": ["Infectious Disease Specialist", "Walk-in Clinic"] },
+
+    "dizzy": { "primary": "ENT Specialist", "alternatives": ["Cardiologist", "Neurologist"] },
+    "shake": { "primary": "Neurologist", "alternatives": ["Endocrinologist", "Primary Care Physician"] },
+
+    "pain": { "primary": "General Practitioner", "alternatives": ["Pain Clinic", "Pharmacist"] },
+
+    "urination": { "primary": "Urologist", "alternatives": ["Primary Care Physician"] },
+    "burning urine": { "primary": "Urologist", "alternatives": ["Primary Care Physician"] },
+    "uti": { "primary": "Primary Care Physician", "alternatives": ["Urologist"] }
+  },
+
+  "symptom_profiles": {
+    "gerd": {
+      "trigger_keywords": ["acid", "reflux", "heartburn", "stomach burn"],
+      "severity": "Low",
+      "persistent_note": "If symptoms last more than 2 weeks, professional review is recommended.",
+      "allowed": ["Oatmeal", "Ginger", "Melons", "Chicken Breast", "Fennel", "Banana"],
+      "avoid": ["Coffee", "Spicy Food", "Chocolate", "Tomatoes", "Citrus", "Mint"],
+      "otc_meds": ["Antacids", "H2 Blockers (Pepcid)", "PPIs (Prilosec)"]
+    },
+
+    "nausea": {
+      "trigger_keywords": ["nausea", "queasy", "vomiting", "throw up", "sick to stomach"],
+      "severity": "Medium",
+      "persistent_note": "If nausea persists beyond 48 hours or prevents hydration, see a clinician.",
+      "allowed": ["Flat Ginger Ale", "Crackers", "Dry Toast", "Bananas", "Rice"],
+      "avoid": ["Greasy Foods", "Dairy", "Spicy Foods", "Strong Smells", "Alcohol"],
+      "otc_meds": ["Pepto-Bismol", "Emetrol", "Meclizine"]
+    },
+
+    "common_cold": {
+      "trigger_keywords": ["runny nose", "sneezing", "congestion", "cold", "stuffy nose"],
+      "severity": "Low",
+      "persistent_note": "If symptoms persist >10 days, suspect sinus infection and seek medical care.",
+      "allowed": ["Chicken Soup", "Citrus Fruits", "Ginger Tea", "Garlic", "Honey"],
+      "avoid": ["Dairy", "Caffeine", "Alcohol", "Processed Sugar"],
+      "otc_meds": ["Decongestants", "Expectorants", "Zinc Lozenges", "Vitamin C"]
+    },
+
+    "flu": {
+      "trigger_keywords": ["flu", "body aches", "fever", "chills", "influenza"],
+      "severity": "Medium",
+      "persistent_note": "Seek medical attention if high fever lasts more than 3 days.",
+      "allowed": ["Broth", "Electrolytes", "Herbal Tea", "Toast"],
+      "avoid": ["Greasy Foods", "Dairy", "Alcohol", "Caffeine"],
+      "otc_meds": ["Ibuprofen", "Acetaminophen", "Cough Syrup"]
+    },
+
+    "sore_throat": {
+      "trigger_keywords": ["sore throat", "pain swallowing", "scratchy throat", "hoarse"],
+      "severity": "Low",
+      "persistent_note": "If sore throat persists >7 days or worsens, get evaluated.",
+      "allowed": ["Warm Honey Lemon Water", "Smoothies", "Oatmeal", "Scrambled Eggs"],
+      "avoid": ["Toast", "Chips", "Spicy Food", "Acidic Juices"],
+      "otc_meds": ["Lozenges", "Numbing Spray", "Acetaminophen"]
+    },
+
+    "diarrhea": {
+      "trigger_keywords": ["diarrhea", "runny stomach", "loose stool"],
+      "severity": "Low",
+      "persistent_note": "If diarrhea lasts more than 48 hours or includes blood, seek care.",
+      "allowed": ["BRAT Diet", "Electrolytes", "Boiled Potatoes"],
+      "avoid": ["Dairy", "Fatty Foods", "Spicy Foods", "Caffeine", "High Fiber Foods"],
+      "otc_meds": ["Imodium", "Pepto-Bismol"]
+    },
+
+    "constipation": {
+      "trigger_keywords": ["constipation", "can't poop", "bloated", "hard stool"],
+      "severity": "Low",
+      "persistent_note": "If constipation lasts >1 week, consult a clinician.",
+      "allowed": ["Prunes", "High Fiber Cereal", "Beans", "Apples", "Water"],
+      "avoid": ["Cheese", "White Rice", "Red Meat", "Processed Foods"],
+      "otc_meds": ["Colace", "Metamucil", "Miralax"]
+    },
+
+    "seasonal_allergies": {
+      "trigger_keywords": ["allergies", "hay fever", "itchy eyes", "pollen"],
+      "severity": "Low",
+      "persistent_note": "If symptoms last entire season despite OTC meds, see an allergist.",
+      "allowed": ["Local Honey", "Pineapple", "Yogurt", "Turmeric"],
+      "avoid": ["Aged Cheeses", "Fermented Foods", "Alcohol", "Melons"],
+      "otc_meds": ["Antihistamines", "Nasal Sprays", "Eye Drops"]
+    },
+
+    "menstrual_cramps": {
+      "trigger_keywords": ["period pain", "cramps", "menstrual", "pms"],
+      "severity": "Low–Medium",
+      "persistent_note": "If pain is debilitating each month, gynecological review is advised.",
+      "allowed": ["Dark Chocolate", "Ginger Tea", "Salmon", "Leafy Greens", "Water"],
+      "avoid": ["Salty Foods", "Caffeine", "Alcohol", "Fatty Foods"],
+      "otc_meds": ["Ibuprofen", "Naproxen", "Midol"]
+    },
+
+    "tension_headache": {
+      "trigger_keywords": ["headache", "tight head", "stress headache"],
+      "severity": "Low",
+      "persistent_note": "If headaches occur daily or increasing in frequency, evaluation recommended.",
+      "allowed": ["Water", "Herbal Tea", "Banana", "Hydrating Foods"],
+      "avoid": ["Caffeine", "Alcohol", "Salty Foods"],
+      "otc_meds": ["Ibuprofen", "Acetaminophen", "Aspirin"]
+    }
+  }
+}

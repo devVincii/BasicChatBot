@@ -1,1 +1,250 @@
-"empty for now, there'll be a lot of dialogue patterns and responses here"
+{
+  "emergency_keywords": [
+    "chest pain",
+    "crushing chest",
+    "angina",
+    "trouble breathing",
+    "shortness of breath",
+    "dyspnea",
+    "unconscious",
+    "blacked out",
+    "stroke",
+    "face drooping",
+    "severe bleeding",
+    "hemorrhage",
+    "fainted",
+    "vision loss",
+    "blindness",
+    "suicide",
+    "kill myself",
+    "thunderclap headache",
+    "worst headache of my life",
+    "seizure",
+    "convulsing",
+    "vomiting blood"
+  ],
+  "specialist_map": {
+    "stomach": {
+      "primary": "Gastroenterologist",
+      "alternatives": ["Internist", "Family Medicine Practitioner", "Nurse Practitioner"]
+    },
+    "nausea": {
+      "primary": "Gastroenterologist",
+      "alternatives": ["Primary Care Physician", "Pharmacist"]
+    },
+    "gut": {
+      "primary": "Gastroenterologist",
+      "alternatives": ["Internist", "General Surgeon"]
+    },
+    "acid": {
+      "primary": "Gastroenterologist",
+      "alternatives": ["Dietitian", "Primary Care Physician"]
+    },
+    "skin": {
+      "primary": "Dermatologist",
+      "alternatives": ["Plastic Surgeon", "Allergist", "Primary Care Physician"]
+    },
+    "rash": {
+      "primary": "Dermatologist",
+      "alternatives": ["Allergist", "Infectious Disease Specialist"]
+    },
+    "eye": {
+      "primary": "Ophthalmologist",
+      "alternatives": ["Optometrist", "Neurologist (if vision loss)"]
+    },
+    "joint": {
+      "primary": "Rheumatologist",
+      "alternatives": ["Orthopedist", "Physical Therapist", "Sports Medicine"]
+    },
+    "head": {
+      "primary": "Neurologist",
+      "alternatives": ["Pain Management Specialist", "ENT Specialist"]
+    },
+    "sleep": {
+      "primary": "Sleep Medicine Specialist",
+      "alternatives": ["Pulmonologist", "Psychiatrist", "Neurologist"]
+    },
+    "tired": {
+      "primary": "Endocrinologist",
+      "alternatives": ["Internist", "Rheumatologist", "Hematologist"]
+    },
+    "fever": {
+      "primary": "Primary Care Physician",
+      "alternatives": ["Infectious Disease Specialist", "Walk-in Clinic"]
+    },
+    "cold": {
+      "primary": "Primary Care Physician",
+      "alternatives": ["Walk-in Clinic", "Pharmacist"]
+    },
+    "flu": {
+      "primary": "Primary Care Physician",
+      "alternatives": ["Walk-in Clinic", "Telehealth Provider"]
+    },
+    "shake": {
+      "primary": "Neurologist",
+      "alternatives": ["Endocrinologist (if sugar related)", "Primary Care Physician"]
+    },
+    "dizzy": {
+      "primary": "ENT Specialist (if ear related)",
+      "alternatives": ["Cardiologist", "Neurologist"]
+    },
+    "pain": {
+      "primary": "General Practitioner",
+      "alternatives": ["Pain Clinic", "Pharmacist"]
+    }
+  },
+  "diet_plans": {
+    "gerd": {
+      "trigger_keywords": ["acid", "reflux", "heartburn", "stomach burn"],
+      "severity": "Low",
+      "allowed": ["Oatmeal", "Ginger", "Melons", "Chicken Breast", "Fennel", "Banana"],
+      "avoid": ["Coffee", "Spicy Food", "Chocolate", "Tomatoes", "Citrus", "Mint"],
+      "otc_meds": ["Antacids (Tums, Rolaids)", "H2 Blockers (Pepcid)", "Proton Pump Inhibitors (Prilosec)"],
+      "log_template": "The patient enquired about acid/reflux solution [Oatmeal, Ginger, Melons], avoid [Coffee, Spicy Food, Chocolate]"
+    },
+    "nausea": {
+      "trigger_keywords": ["nausea", "queasy", "vomiting", "throw up", "sick to stomach"],
+      "severity": "Medium",
+      "allowed": ["Ginger Ale (flat)", "Crackers (Saltines)", "Dry Toast", "Bananas", "Rice"],
+      "avoid": ["Greasy Foods", "Dairy", "Spicy Foods", "Strong Smells", "Alcohol"],
+      "otc_meds": ["Bismuth Subsalicylate (Pepto-Bismol)", "Phosphorated Carbohydrate (Emetrol)", "Meclizine (Dramamine)"],
+      "log_template": "The patient enquired about nausea solution [Ginger Ale, Crackers, Bananas], avoid [Greasy Foods, Dairy, Alcohol]"
+    },
+    "persistent_fever": {
+      "trigger_keywords": ["fever", "high temperature", "hot and cold", "burning up", "chills"],
+      "severity": "Medium (Consult doctor if > 103°F or > 3 days)",
+      "allowed": ["Water", "Coconut Water", "Ice Pops", "Bone Broth", "Fruits (High water content)"],
+      "avoid": ["Caffeine (Dehydrating)", "Alcohol", "Heavy/Fatty Meals", "Sugary Sodas"],
+      "otc_meds": ["Acetaminophen (Tylenol)", "Ibuprofen (Advil/Motrin)", "Naproxen (Aleve)"],
+      "log_template": "The patient enquired about fever solution [Water, Coconut Water, Bone Broth], avoid [Caffeine, Alcohol, Heavy Meals]"
+    },
+    "shaking_tremors": {
+      "trigger_keywords": ["shaking", "tremors", "hands shaking", "shivering", "trembling"],
+      "severity": "Medium (Could be low sugar, anxiety, or neurological)",
+      "allowed": ["Fruit Juice (for blood sugar)", "Complex Carbs", "Chamomile Tea (for anxiety)", "Water"],
+      "avoid": ["Caffeine", "Energy Drinks", "Alcohol", "High Sugar Candy (causes crash)"],
+      "otc_meds": ["Magnesium Supplements (muscle relaxation)", "Vitamin B Complex", "Electrolytes"],
+      "log_template": "The patient enquired about shaking/tremors solution [Fruit Juice, Chamomile Tea], avoid [Caffeine, Energy Drinks]"
+    },
+    "dizziness": {
+      "trigger_keywords": ["dizzy", "lightheaded", "spinning", "vertigo", "unsteady"],
+      "severity": "Medium",
+      "allowed": ["Water (Hydration)", "Ginger Tea", "Whole Grains", "Iron-rich foods (Spinach/Beef)"],
+      "avoid": ["Salt (worsens vertigo)", "Caffeine", "Alcohol", "Tobacco"],
+      "otc_meds": ["Meclizine (Bonine/Dramamine)", "Dimenhydrinate"],
+      "log_template": "The patient enquired about dizziness solution [Water, Ginger Tea, Whole Grains], avoid [Salt, Caffeine, Alcohol]"
+    },
+    "diabetes": {
+      "trigger_keywords": ["sugar", "diabetic", "insulin", "thirsty", "glucose"],
+      "severity": "Medium",
+      "allowed": ["Leafy Greens", "Fatty Fish", "Beans", "Berries", "Sweet Potatoes", "Chia Seeds"],
+      "avoid": ["Soda", "White Bread", "Pasta", "Candy", "Fruit Juice", "Dried Fruit"],
+      "otc_meds": ["Glucose Tablets (for lows)", "Multivitamins"],
+      "log_template": "The patient enquired about sugar/diabetes solution [Leafy Greens, Fatty Fish, Beans], avoid [Soda, White Bread, Pasta]"
+    },
+    "hypertension": {
+      "trigger_keywords": ["pressure", "hypertension", "heart rate", "bp"],
+      "severity": "Medium",
+      "allowed": ["Bananas", "Salmon", "Seeds", "Beets", "Garlic", "Dark Chocolate (High %)", "Pistachios"],
+      "avoid": ["Processed Meats", "Canned Soup", "Salty Snacks", "Frozen Pizza", "Pickles", "Alcohol"],
+      "otc_meds": ["Consult Doctor (OTC meds like NSAIDs can raise BP)", "CoQ10 supplements"],
+      "log_template": "The patient enquired about pressure/hypertension solution [Bananas, Salmon, Seeds], avoid [Processed Meats, Canned Soup, Salty Snacks]"
+    },
+    "insomnia": {
+      "trigger_keywords": ["sleep", "awake", "insomnia", "cant sleep", "up all night"],
+      "severity": "Low",
+      "allowed": ["Chamomile Tea", "Warm Milk", "Tart Cherry Juice", "Kiwi", "Almonds", "Walnuts"],
+      "avoid": ["Caffeine", "Alcohol", "Spicy Food", "Heavy Meals before bed", "High Sugar"],
+      "otc_meds": ["Melatonin", "Diphenhydramine (Benadryl)", "Valerian Root"],
+      "log_template": "The patient enquired about sleep/insomnia solution [Chamomile Tea, Warm Milk, Kiwi], avoid [Caffeine, Alcohol, Heavy Meals]"
+    },
+    "fatigue": {
+      "trigger_keywords": ["tired", "exhausted", "fatigue", "low energy", "drained"],
+      "severity": "Low (Chronic)",
+      "allowed": ["Oats (Complex Carbs)", "Water", "Lean Protein", "Spinach (Iron)", "Eggs", "Quinoa"],
+      "avoid": ["Sugary Energy Drinks", "White Bread", "Fried Foods", "Donuts", "Processed Snacks"],
+      "otc_meds": ["Iron Supplements (if anemic)", "Vitamin B12", "Multivitamins"],
+      "log_template": "The patient enquired about fatigue/tiredness solution [Oats, Water, Lean Protein], avoid [Sugary Energy Drinks, White Bread, Fried Foods]"
+    },
+    "common_cold": {
+      "trigger_keywords": ["runny nose", "sneezing", "congestion", "cold", "stuffy nose"],
+      "severity": "Low",
+      "allowed": ["Chicken Soup", "Citrus Fruits (Vitamin C)", "Ginger Tea", "Garlic", "Honey"],
+      "avoid": ["Dairy (may thicken mucus)", "Caffeine", "Alcohol", "Processed Sugar"],
+      "otc_meds": ["Decongestants (Sudafed)", "Expectorants (Mucinex)", "Zinc Lozenges", "Vitamin C"],
+      "log_template": "The patient enquired about cold symptoms solution [Chicken Soup, Citrus, Ginger Tea], avoid [Dairy, Caffeine, Alcohol]"
+    },
+    "flu": {
+      "trigger_keywords": ["flu", "body aches", "fever", "chills", "influenza"],
+      "severity": "Medium",
+      "allowed": ["Broth", "Electrolytes (Gatorade/Pedialyte)", "Herbal Tea", "Toast"],
+      "avoid": ["Greasy Foods", "Dairy", "Alcohol", "Caffeine", "Hard to digest meats"],
+      "otc_meds": ["Ibuprofen (Advil) for aches", "Acetaminophen (Tylenol) for fever", "Cough Syrup"],
+      "log_template": "The patient enquired about flu symptoms solution [Broth, Electrolytes, Toast], avoid [Greasy Foods, Dairy, Alcohol]"
+    },
+    "sore_throat": {
+      "trigger_keywords": ["sore throat", "pain swallowing", "scratchy throat", "hoarse"],
+      "severity": "Low",
+      "allowed": ["Warm Honey Lemon Water", "Smoothies", "Oatmeal", "Scrambled Eggs"],
+      "avoid": ["Toast (scratchy)", "Chips", "Spicy Food", "Acidic Juices"],
+      "otc_meds": ["Throat Lozenges (Halls/Ricola)", "Throat Numbing Spray", "Acetaminophen"],
+      "log_template": "The patient enquired about sore throat solution [Honey Water, Smoothies], avoid [Toast, Chips, Spicy Food]"
+    },
+    "diarrhea": {
+      "trigger_keywords": ["diarrhea", "runny stomach", "stomach upset", "loose stool"],
+      "severity": "Low (unless severe dehydration)",
+      "allowed": ["BRAT Diet (Bananas, Rice, Applesauce, Toast)", "Electrolytes", "Boiled Potatoes"],
+      "avoid": ["Dairy", "Fatty Foods", "Spicy Foods", "Caffeine", "High Fiber Foods"],
+      "otc_meds": ["Loperamide (Imodium)", "Bismuth Subsalicylate (Pepto-Bismol)"],
+      "log_template": "The patient enquired about diarrhea solution [BRAT Diet, Electrolytes], avoid [Dairy, Fatty Foods, Caffeine]"
+    },
+    "constipation": {
+      "trigger_keywords": ["constipation", "cant poop", "bloated", "hard stool"],
+      "severity": "Low",
+      "allowed": ["Prunes", "High Fiber Cereal", "Beans", "Apples (with skin)", "Water"],
+      "avoid": ["Cheese", "White Rice", "Red Meat", "Processed Foods", "Bananas (unripe)"],
+      "otc_meds": ["Stool Softeners (Colace)", "Fiber Supplements (Metamucil)", "Mild Laxatives (Miralax)"],
+      "log_template": "The patient enquired about constipation solution [Prunes, Fiber Cereal, Water], avoid [Cheese, White Rice, Red Meat]"
+    },
+    "seasonal_allergies": {
+      "trigger_keywords": ["allergies", "hay fever", "itchy eyes", "pollen"],
+      "severity": "Low",
+      "allowed": ["Local Honey", "Pineapple (Bromelain)", "Yogurt (Probiotics)", "Turmeric"],
+      "avoid": ["Aged Cheeses", "Fermented Foods", "Alcohol", "Melons (some react with pollen)"],
+      "otc_meds": ["Antihistamines (Claritin, Zyrtec, Benadryl)", "Nasal Sprays (Flonase)", "Eye Drops"],
+      "log_template": "The patient enquired about allergies solution [Local Honey, Pineapple], avoid [Aged Cheeses, Alcohol]"
+    },
+    "menstrual_cramps": {
+      "trigger_keywords": ["period pain", "cramps", "menstrual", "pms"],
+      "severity": "Low to Medium",
+      "allowed": ["Dark Chocolate", "Ginger Tea", "Salmon", "Leafy Greens", "Water"],
+      "avoid": ["Salty Foods (Bloating)", "Caffeine", "Alcohol", "Fatty Foods"],
+      "otc_meds": ["Ibuprofen (Advil/Motrin) - Best for cramps", "Naproxen (Aleve)", "Midol"],
+      "log_template": "The patient enquired about menstrual cramps solution [Dark Chocolate, Ginger Tea], avoid [Salty Foods, Caffeine]"
+    },
+    "minor_burn": {
+      "trigger_keywords": ["burned hand", "minor burn", "hot stove", "sunburn"],
+      "severity": "Low",
+      "allowed": ["High Protein (Healing)", "Vitamin C rich foods", "Hydration"],
+      "avoid": ["Alcohol (Dehydrating)", "Sugary Foods (Inflammatory)"],
+      "otc_meds": ["Aloe Vera Gel", "Antibiotic Ointment (Neosporin)", "Acetaminophen for pain"],
+      "log_template": "The patient enquired about minor burn solution [High Protein, Vitamin C], avoid [Alcohol, Sugar]"
+    },
+    "migraine": {
+      "trigger_keywords": ["migraine", "light sensitivity", "aura", "one sided headache"],
+      "severity": "Medium - High Pain",
+      "allowed": ["Magnesium Rich Foods", "Spinach", "Salmon", "Ginger Tea", "Water"],
+      "avoid": ["Aged Cheese", "Red Wine", "Processed Meats (Nitrates)", "Chocolate", "Artificial Sweeteners"],
+      "otc_meds": ["Excedrin Migraine", "Ibuprofen", "Aspirin"],
+      "log_template": "The patient enquired about migraine solution [Spinach, Salmon, Ginger Tea], avoid [Aged Cheese, Red Wine, Processed Meats]"
+    },
+    "tension_headache": {
+      "trigger_keywords": ["headache", "tight head", "band around head", "stress headache"],
+      "severity": "Low",
+      "allowed": ["Water (Hydration)", "Watermelon", "Herbal Tea", "Banana (Potassium)"],
+      "avoid": ["Caffeine (Withdrawal)", "Alcohol", "Chewing Gum", "Salty Foods"],
+      "otc_meds": ["Ibuprofen (Advil)", "Acetaminophen (Tylenol)", "Aspirin"],
+      "log_template": "The patient enquired about tension headache solution [Water, Herbal Tea, Banana], avoid [Caffeine, Alcohol, Salty Foods]"
+    }
+  }
+}

@@ -13,7 +13,8 @@
       ],
       "responses": [
         "Confirmed. I'm scheduling an appointment with **@person.name** for **@sys.date** at **@sys.time**.",
-        "Got it! I will book that call now."
+        "Got it! I will book that call now.",
+        "sure thing will do that"
       ],
       "action": "API_CALL_CALENDAR"
     },

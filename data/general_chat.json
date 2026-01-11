@@ -24,7 +24,8 @@
       "responses": [
         "Hello! How may I assist you with a general question, task, or medical query?",
         "Hi there! What can I help you find or do today?",
-        "Greetings! I'm ready to help. What's on your mind?"
+        "Greetings! I'm ready to help. What's on your mind?",
+        "Good day, how can i help you?"
       ]
     },
    
@@ -54,7 +55,8 @@
       "responses": [
         "Goodbye! Have a great day.",
         "See you later!",
-        "Farewell! Feel free to reach out anytime."
+        "Farewell! Feel free to reach out anytime.",
+        "see ya."
       ]
     },
 

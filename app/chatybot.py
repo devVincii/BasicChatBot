@@ -1,6 +1,6 @@
+# import necessary libraries for data handling, numerical computations, and building the neural network
 import os
 import json
-import spacy
 import numpy as np
 import random
 
@@ -9,6 +9,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.data import Dataset, DataLoader, TensorDataset
 import torch.optim as optim
+
 
 
 # Define the Neural Network model architecture
@@ -136,9 +137,9 @@ class TextProcessor:
         self.X = np.array(bags)
         self.y = np.array(indices)
         
-        
+               
 ###################################################################################################################
-    def training_model(self, input_size, output_size, hidden_size=8, num_epochs=1000, batch_size=8, learning_rate=0.001):
+    def training_model(self, input_size, output_size, num_epochs=1000, batch_size=8, learning_rate=0.001):
         # Convert training data from NumPy arrays to PyTorch tensors
         X_tensor = torch.tensor(self.X).float()
         y_tensor = torch.tensor(self.y).long()
@@ -171,14 +172,14 @@ class TextProcessor:
 
             # Print the loss every 100 epochs for monitoring
             if (epoch + 1) % 100 == 0:
-                print(f"Epoch [{epoch + 1}/{num_epochs}], Loss: {loss.item():.4f}")
+                print(f"Epoch [{epoch + 1}/{num_epochs}], Loss: {loss.item():.3f}")
 
         # Store the trained model in the instance
         self.model = model
 
     def save_model(self, model_path):
         # Check if a model has been trained
-        self.model = None
+        
         if self.model:
             # Save the model's state dictionary to the specified path
             torch.save(self.model.state_dict(), model_path)
@@ -240,12 +241,14 @@ class TextProcessor:
 
 # This block runs only when the script is executed directly (not when imported)
 if __name__ == '__main__':
+    
+
     # Initialize a dictionary to hold the combined intents from all files
     all_intents = {'intents': []}
+    
     # List of paths to the intent JSON files
     intent_files = [
         '/home/ngobeni/Documents/Programming/project/clinicM/data/general_chat.json',
-        '/home/ngobeni/Documents/Programming/project/clinicM/data/task_automation.json',
         '/home/ngobeni/Documents/Programming/project/clinicM/data/medical_triage.json'
     ]
 
@@ -281,12 +284,15 @@ if __name__ == '__main__':
 
     # Start an infinite loop for the conversation
     while True:
-        # Get input from the user
+        # Get input from the usersure 
         user_input = input("You: ")
         # If the user types 'quit', break the loop to end the program
-        if user_input.lower() == 'quit' or user_input.lower() == 'q':
+        list_of_exits = ['quit', 'q', 'exit', 'close', 'stop']
+        if user_input.lower() in list_of_exits:
             break
         # Process the user's message to get a response from the bot
         response = processor.process_message(user_input)
         # Print the bot's response
         print(f"Bot: {response}")
+        
+        
